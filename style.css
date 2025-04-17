@@ -417,29 +417,32 @@ footer .right-item{
     }
 }
 
-/* Responsive Design for screen width <= 1200px */
-@media screen and (max-width: 1200px) {
+@media (max-width: 1080px) {
     header {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
+        flex-direction: column;
+        align-items: center;
     }
-  
-    header .logo,
+
+    header .logo {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
     header .menu-bar {
-      width: 100%;
-      text-align: center;
-      margin: 10px 0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
     }
-  
-    .menu-bar {
-      margin: 10px auto;
-    }
-  
+
     .menu-bar li {
-      display: block;
-      margin: 10px 0;
+        display: block;
+        margin: 15px 0;
+    }
+
+    .menu-bar li a {
+        font-size: 20px;
+        display: inline-block;
     }
     .Grapphics{
         text-align: center;
@@ -447,46 +450,45 @@ footer .right-item{
     .Grapphics img{
         width: 450px;
     }
+
     .section1 {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
     }
-  
-    .left-side,
-    .right-side {
-      width: 90%;
-      margin: 10px auto;
-      text-align: center;
+
+    .left-side, .right-side {
+        width: 90%;
+        margin: 10px 0;
+        text-align: center;
     }
-  
+
     .right-side img {
-      width: 80%;
+        width: 80%;
     }
-  
+
     .section3 {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .section3 .Grapphics {
-      width: 90%;
-      margin: 20px auto;
-      padding: 30px 20px;
+        width: 90%;
+        margin: 20px auto;
     }
-  
+
     footer {
-      flex-direction: column;
-      text-align: center;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-  
-    footer .left-item,
+
+    footer .left-item, footer .right-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
     footer .right-item {
-      width: 100%;
-      text-align: center;
-      margin: 10px 0;
+        text-align: center;
     }
-  
-    .left-item i {
-      margin: 10px;
-    }
-  }
+}
