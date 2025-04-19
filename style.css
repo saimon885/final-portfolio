@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     background-color: #030327;
 }
@@ -129,6 +130,9 @@ button a{
     width: 500px;
     border-radius: 50%;
 }
+.right-side img:hover{
+    opacity: 0.8;
+}
 /*section1 end*/
 .section1::after{
     clear: both;
@@ -196,6 +200,57 @@ button a{
 .section3 .Grapphics h3 a:hover{
     color: #ff8c00;  
 }
+/**/
+.sectionnn{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    color: white;
+}
+.sectionnn .Grapphics{
+    background-color:rgba(83, 83, 83, 0.219) ;
+    width: 40%;
+    text-align: center;
+    margin-left: 30px;
+    padding: 50px 65px;
+    border-radius: 20px;
+}
+.sectionnn .Grapphics:hover{
+    box-shadow: 1px 1px 7px rgba(192, 192, 192, 0.966) ,
+    -1px -1px 7px rgba(172, 171, 171, 0.945);
+}
+.sectionnn .Grapphics h1{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ff8c00;
+    text-align: left;
+}
+.sectionnn .Grapphics p{
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: left;
+
+}
+.sectionnn .Grapphics h3{
+    margin-top: 20px;
+    text-align: left;
+
+}
+.sectionnn .Grapphics h3 a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.sectionnn .Grapphics h3 a:hover{
+    color: #ff8c00;  
+}
+
+
 /*section3 end*/
 /*progrss bar*/
 
@@ -232,7 +287,7 @@ button a{
     animation-timing-function: linear;
     animation-delay: 2s;
     animation-fill-mode: forwards;
-    animation-iteration-count:2;
+    animation-iteration-count:infinite;
 }
 .myskill li.html::after{
     animation-name: html;
@@ -302,6 +357,18 @@ button a{
     color: rgb(4, 156, 156);
 }
 
+/*progrss bar*/
+.Grapphics img{
+    width: 270px;
+}
+
+/**/
+.Grapphics a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(4, 156, 156);
+}
+
 /*footer*/
 footer{
     width: 100%;
@@ -343,9 +410,13 @@ footer .right-item{
         flex-direction: column;
         align-items: center;
     }
+    hr{
+        width: 65%;
+    }
 
     header .logo {
         width: 100%;
+        font-size: 35px;
         text-align: center;
         margin: 10px 0;
     }
@@ -389,6 +460,25 @@ footer .right-item{
         margin: 20px 0;
         padding: 30px;
     }
+    .section3 .Grapphics img{
+        width: 250px;
+    }
+
+
+    .sectionnn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionnn .Grapphics {
+        width: 90%;
+        text-align: center;
+        margin: 20px 0;
+        padding: 30px;
+    }
+    .sectionnn .Grapphics img{
+        width: 250px;
+    }
 
     footer {
         flex-direction: column;
@@ -417,6 +507,9 @@ footer .right-item{
     }
 }
 
+
+
+
 @media (max-width: 1080px) {
     header {
         flex-direction: column;
@@ -425,6 +518,7 @@ footer .right-item{
 
     header .logo {
         width: 100%;
+        font-size: 45px;
         text-align: center;
         margin: 10px 0;
     }
@@ -438,10 +532,11 @@ footer .right-item{
     .menu-bar li {
         display: block;
         margin: 15px 0;
+        
     }
 
     .menu-bar li a {
-        font-size: 20px;
+        font-size: 25px;
         display: inline-block;
     }
     .Grapphics{
@@ -455,6 +550,9 @@ footer .right-item{
         flex-direction: column;
         align-items: center;
         margin-top: 50px;
+    }
+    hr{
+        width: 75%;
     }
 
     .left-side, .right-side {
@@ -472,6 +570,15 @@ footer .right-item{
     }
 
     .section3 .Grapphics {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .sectionnn {
+        flex-direction: column;
+    }
+
+    .sectionnn .Grapphics {
         width: 90%;
         margin: 20px auto;
     }
