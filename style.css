@@ -449,9 +449,6 @@ footer .right-item{
     hr{
         width: 45%;
     }
-    .logo span{
-        font-size: 25px;
-    }
 
     header .logo {
         width: 80%;
@@ -651,3 +648,4 @@ footer .right-item{
         text-align: center;
     }
 }
+
