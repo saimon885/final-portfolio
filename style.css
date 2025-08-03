@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.noto-serif{
+    font-family: "Inter", sans-serif;
+}
+
 body{
     background-color: #030327;
 }
@@ -11,7 +15,9 @@ body{
 header{
     width: 100%;
     height: auto;
+    margin-top: 30px;
     display: flex;
+    align-items: center;
     flex-direction: row;
 }
 
@@ -56,7 +62,7 @@ hr{
     clear: both;
     border: 2px solid wheat;
     border-bottom: none;
-    width: 50%;
+    width: 60%;
     margin: 20px auto;
 }
 .menu-bar .one-list-dn:hover{
@@ -140,9 +146,10 @@ button a{
     content: "";
 }
 /*section2 start*/
-.section2{
+.section2,
+.section3{
     width: 100%;
-    margin-top: 200px;
+    margin-top: 150px;
     color: white;
 }
 .section2 h1{
@@ -164,14 +171,18 @@ button a{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 25px;
     margin: 100px auto;
     color: white;
 }
 .section3 .Grapphics{
     background-color:rgba(83, 83, 83, 0.219) ;
-    width: 40%;
-    margin-left: 30px;
-    padding: 50px 65px;
+    width: 400px;
+    /* margin-left: 30px; */
+    margin: 0 auto;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 35px;
     border-radius: 20px;
 }
 .section3 .Grapphics:hover{
@@ -179,23 +190,28 @@ button a{
     -1px -1px 7px rgba(172, 171, 171, 0.945);
 }
 .section3 .Grapphics h1{
-    font-size: 25px;
+    font-size: 1.5rem;
     font-family: sans-serif;
     font-weight: 700;
     color: #ff8c00;
 }
 .section3 .Grapphics p{
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 1.25rem;
 }
+/* .section3 .Grapphics a{
+    font-size: 1.25rem;
+} */
 .section3 .Grapphics h3{
     margin-top: 20px;
+    text-align: center;
 }
 .section3 .Grapphics h3 a{
     text-decoration: none;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
 }
 .section3 .Grapphics h3 a:hover{
     color: #ff8c00;  
@@ -203,19 +219,20 @@ button a{
 /**/
 .sectionnn{
     width: 80%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     flex-direction: row;
+    gap: 50px;
     justify-content: center;
     align-items: center;
-    margin: -40px auto;
+    margin: 50px auto;
     color: white;
 }
 .sectionnn .Grapphics{
     background-color:rgba(83, 83, 83, 0.219) ;
-    width: 40%;
+    width: 350px;
     text-align: center;
-    margin-left: 30px;
-    padding: 50px 65px;
+    padding: 20px 35px;
     border-radius: 20px;
 }
 .sectionnn .Grapphics:hover{
@@ -228,10 +245,12 @@ button a{
     font-weight: 700;
     color: #ff8c00;
     text-align: left;
+    margin-top: 10px;
 }
 .sectionnn .Grapphics p{
     margin-top: 10px;
     font-size: 18px;
+    /* width: 250px; */
     text-align: left;
 
 }
@@ -260,14 +279,14 @@ button a{
     font-weight:700;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    font-size: 20px;
+    font-size: 15px;
     list-style: none;
 }
 .myskill li::before{
     width: 100%;
     content: "";
     position: absolute;
-    height: 10px;
+    height: 7px;
     top: calc(100% + 5px);
     left: 0;
     border-radius: 1000px;
@@ -279,7 +298,7 @@ button a{
     content: "";
     left: 0;
     position: absolute;
-    height: 10px;
+    height: 7px;
     top: calc(100% + 5px);
     border-radius: 1000px;
     background-color: #ff8c00; 
@@ -303,6 +322,22 @@ button a{
 @keyframes css{
     to{
         width: 80%;
+    }
+}
+.myskill li.tailwind::after{
+    animation-name: tailwind;
+}
+@keyframes tailwind{
+    to{
+        width: 80%;
+    }
+}
+.myskill li.git::after{
+    animation-name: git;
+}
+@keyframes git{
+    to{
+        width: 70%;
     }
 }
 .myskill li.javascript::after{
@@ -346,9 +381,6 @@ button a{
     }
 }
 /*progrss bar*/
-.Grapphics img{
-    width: 270px;
-}
 
 /**/
 .Grapphics a{
@@ -359,7 +391,8 @@ button a{
 
 /*progrss bar*/
 .Grapphics img{
-    width: 270px;
+    width: 100%;
+    border-radius: 10px;
 }
 
 /**/
@@ -368,6 +401,7 @@ button a{
     font-size: 20px;
     color: rgb(4, 156, 156);
 }
+
 
 /*footer*/
 footer{
@@ -405,18 +439,23 @@ footer .right-item{
     padding: 20px 0; 
 }
 /*responsive design*/
-@media (max-width: 720px) {
+@media(max-width: 720px) {
     header {
+        width: 90%;
+        margin: 0 auto;
         flex-direction: column;
         align-items: center;
     }
     hr{
-        width: 65%;
+        width: 45%;
+    }
+    .logo span{
+        font-size: 25px;
     }
 
     header .logo {
-        width: 100%;
-        font-size: 35px;
+        width: 80%;
+        font-size: 25px;
         text-align: center;
         margin: 10px 0;
     }
@@ -443,6 +482,10 @@ footer .right-item{
         margin: 10px auto;
         text-align: center;
     }
+    .section2,
+    .section3{
+        margin: 50px auto ;
+    }
 
     .right-side img {
         width: 80%;
@@ -454,15 +497,16 @@ footer .right-item{
         align-items: center;
     }
 
-    .section3 .Grapphics {
-        width: 90%;
-        text-align: center;
+    .apphics {
+        width: 95%;
+        text-align: start;
         margin: 20px 0;
         padding: 30px;
     }
     .section3 .Grapphics img{
-        width: 250px;
+        width: 200px;
     }
+
 
 
     .sectionnn {
@@ -484,6 +528,11 @@ footer .right-item{
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    .section3 .Grapphics a{
+        font-size: 1rem;
+        text-align: center;
+        /* margin-left: 20px; */
     }
 
     footer .left-item, footer .right-item {
@@ -539,7 +588,7 @@ footer .right-item{
         font-size: 25px;
         display: inline-block;
     }
-    .Grapphics{
+    .Grapphics h1{
         text-align: center;
     }
     .Grapphics img{
@@ -570,16 +619,19 @@ footer .right-item{
     }
 
     .section3 .Grapphics {
-        width: 90%;
+        width: 95%;
         margin: 20px auto;
+        padding: 10px;
     }
 
     .sectionnn {
         flex-direction: column;
+        gap: 10px;
+        grid-template-columns: repeat(1,1fr);
     }
 
     .sectionnn .Grapphics {
-        width: 90%;
+        width: 95%;
         margin: 20px auto;
     }
 
